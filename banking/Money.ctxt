@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=dollars
+comment0.target=Money(int)
+comment0.text=\ Constructor\r\n\r\n\ \ @param\ dollars\ whole\ dollar\ amount\r\n
+comment1.params=dollars\ cents
+comment1.target=Money(int,\ int)
+comment1.text=\ Constructor\r\n\r\n\ \ @param\ dollars\ dollar\ part\ of\ amount\r\n\ \ @param\ cents\ cents\ part\ of\ amount\r\n
+comment2.params=toCopy
+comment2.target=Money(Money)
+comment2.text=\ Copy\ constructor\r\n\r\n\ \ @param\ toCopy\ the\ Money\ object\ to\ copy\r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment3.text=\ Create\ a\ string\ representation\ of\ this\ amount\r\n\r\n\ \ @return\ string\ representation\ of\ this\ amount\r\n
+comment4.params=amountToAdd
+comment4.target=void\ add(Money)
+comment4.text=\ Add\ an\ amount\ of\ money\ to\ this\r\n\r\n\ \ @param\ amountToAdd\ the\ amount\ to\ add\r\n
+comment5.params=amountToSubtract
+comment5.target=void\ subtract(Money)
+comment5.text=\ Subtract\ an\ amount\ of\ money\ from\ this\r\n\r\n\ \ @param\ amountToSubtract\ the\ amount\ to\ subtract\r\n\r\n\ \ Precondition\:\ amount\ must\ be\ <\=\ this\ amount\r\n
+comment6.params=compareTo
+comment6.target=boolean\ lessEqual(Money)
+comment6.text=\ Compare\ this\ to\ another\ amount\r\n\r\n\ \ @param\ compareTo\ the\ amount\ to\ compare\ to\r\n\ \ @return\ true\ if\ this\ amount\ is\ <\=\ compareTo\ amount\r\n
+numComments=7

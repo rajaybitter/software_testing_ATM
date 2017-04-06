@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=banking.Money\ getInitialCash()
+comment0.text=\ Simulate\ getting\ the\ amount\ of\ cash\ in\ the\ cash\ dispenser\ from\ the\ operator\r\n\ \ at\ start\ up\r\n\r\n\ \ @return\ dollar\ value\ of\ the\ bills\ in\ the\ cash\ dispenser\ (\#\ of\ bills\ x\ $20)\r\n
+comment1.params=
+comment1.target=banking.Card\ readCard()
+comment1.text=\ Simulate\ reading\ of\ a\ card\r\n\r\n\r\n\ \ @return\ Card\ object\ representing\ information\ on\ the\ card\ if\ read\r\n\ \ \ \ \ \ \ \ \ \ successfully,\ null\ if\ not\ read\ successfully\r\n
+comment2.params=text
+comment2.target=void\ printLogLine(java.lang.String)
+comment2.text=\ Simulate\ printing\ a\ line\ to\ the\ log\r\n\r\n\ \ @param\ text\ the\ line\ to\ print\r\n
+comment3.params=cardName
+comment3.target=void\ showCard(java.lang.String)
+comment3.text=\ Show\ a\ specific\ card\r\n\r\n\ \ @param\ cardName\ the\ name\ of\ the\ card\ to\ show\r\n
+comment4.params=row\ col\ width\ height\ fill
+comment4.target=java.awt.GridBagConstraints\ makeConstraints(int,\ int,\ int,\ int,\ int)
+comment4.text=\ Create\ a\ GridBagConstraints\ object\ with\ specified\ constraints,\ and\ \r\n\ \ others\ defaulted.\r\n\r\n\ \ @param\ row\ the\ row\ (y\ coordinate)\r\n\ \ @param\ col\ the\ column\ (x\ coordinate)\r\n\ \ @param\ width\ the\ width\r\n\ \ @param\ height\ the\ height\r\n\ \ @param\ fill\ the\ fill\r\n\ \ @return\ GridBagConstraints\ object\ representing\ the\ above\r\n
+numComments=5

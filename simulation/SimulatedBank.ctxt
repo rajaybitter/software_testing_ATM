@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=message\ balances
+comment0.target=banking.Status\ handleMessage(banking.Message,\ banking.Balances)
+comment0.text=\ Simulate\ the\ handling\ of\ a\ message\r\n\r\n\ \ @param\ message\ the\ message\ to\ send\r\n\ \ @param\ balances\ (out)\ balances\ in\ customer's\ account\ as\ reported\r\n\ \ \ \ \ \ \ \ \ by\ bank\r\n\ \ @return\ status\ code\ returned\ by\ bank\r\n
+comment1.params=message\ balances
+comment1.target=banking.Status\ withdrawal(banking.Message,\ banking.Balances)
+comment1.text=\ Simulate\ processing\ of\ a\ withdrawal\r\n\r\n\ \ @param\ message\ the\ message\ describing\ the\ withdrawal\ requested\r\n\ \ @param\ balances\ (out)\ balances\ in\ account\ after\ withdrawal\r\n\ \ @return\ status\ code\ derived\ from\ current\ values\r\n
+comment2.params=message
+comment2.target=banking.Status\ initiateDeposit(banking.Message)
+comment2.text=\ Simulate\ initiation\ of\ a\ deposit.\ At\ this\ point,\ the\ bank\ only\ approves\r\n\ \ the\ validity\ of\ the\ deposit\ -\ no\ changes\ to\ the\ records\ are\ made\ until\r\n\ \ the\ envelope\ is\ actually\ inserted\ \r\n\r\n\ \ @param\ message\ the\ message\ describing\ the\ deposit\ requested\r\n\ \ @return\ status\ code\ derived\ from\ current\ values\r\n
+comment3.params=message\ balances
+comment3.target=banking.Status\ completeDeposit(banking.Message,\ banking.Balances)
+comment3.text=\ Simulate\ completion\ of\ a\ deposit\r\n\r\n\ \ @param\ message\ the\ message\ describing\ the\ deposit\ requested\r\n\ \ @param\ balances\ (out)\ balances\ (not\ updated\ until\ completed)\r\n\ \ @return\ status\ code\ -\ must\ always\ be\ success\ in\ this\ case\r\n
+comment4.params=message\ balances
+comment4.target=banking.Status\ transfer(banking.Message,\ banking.Balances)
+comment4.text=\ Simulate\ processing\ of\ a\ transfer\r\n\r\n\ \ @param\ message\ the\ message\ describing\ the\ transfer\ requested\r\n\ \ @param\ balances\ (out)\ balances\ in\ "to"\ account\ after\ transfer\r\n\ \ @return\ status\ code\ derived\ from\ current\ values\r\n
+comment5.params=message\ balances
+comment5.target=banking.Status\ inquiry(banking.Message,\ banking.Balances)
+comment5.text=\ Simulate\ processing\ of\ an\ inquiry\r\n\r\n\ \ @param\ message\ the\ message\ describing\ the\ inquiry\ requested\r\n\ \ @param\ balances\ (out)\ balances\ in\ account\r\n\ \ @return\ status\ code\ derived\ from\ current\ values\r\n
+numComments=6

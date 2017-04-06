@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=java.lang.String\ toString()
+comment0.text=\ Create\ a\ printable\ string\ representing\ this\ status\r\n\r\n\ \ @return\ string\ representation\r\n
+comment1.params=
+comment1.target=boolean\ isSuccess()
+comment1.text=\ See\ if\ this\ status\ represents\ success\r\n\r\n\ \ @return\ true\ if\ this\ status\ represents\ success\r\n
+comment2.params=
+comment2.target=boolean\ isInvalidPIN()
+comment2.text=\ See\ if\ this\ status\ represents\ an\ invalid\ PIN\r\n\r\n\ \ @return\ true\ if\ this\ status\ represents\ an\ invalid\ PIN\r\n
+comment3.params=
+comment3.target=java.lang.String\ getMessage()
+comment3.text=\ Accessor\ for\ message\ describing\ this\ status\ (used\ if\ status\ is\r\n\ \ not\ success)\r\n\r\n\ \ @return\ description\ of\ the\ problem\r\n
+numComments=4
