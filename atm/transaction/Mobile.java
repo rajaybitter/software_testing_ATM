@@ -6,8 +6,11 @@ import banking.AccountInformation;
 import banking.Card;
 import banking.Message;
 import banking.Money;
+import banking.PhoneNumber;
 import banking.Status;
 import banking.Receipt;
+//customer console
+//made Number class
 
 public class Mobile extends Transaction
 {
@@ -31,32 +34,30 @@ public class Mobile extends Transaction
     protected Message getSpecificsFromCustomer() throws CustomerConsole.Cancelled
     {
         from = atm.getCustomerConsole().readMenuChoice(
-            "Account to withdraw from",
+            "Account to transfer from",
             AccountInformation.ACCOUNT_NAMES);
-
-        String [] amountOptions = { "$20", "$40", "$60", "$100", "$200" };
-        Money [] amountValues = { 
-                                  new Money(20), new Money(40), new Money(60),
-                                  new Money(100), new Money(200)
-                                };
-                                  
         String amountMessage = "";
         boolean validAmount = false;
+        boolean validNumber = false;
         
-        while (! validAmount)
-        {
-            amount = amountValues [ 
-                atm.getCustomerConsole().readMenuChoice(
-                    amountMessage + "Amount of cash to withdraw", amountOptions) ];
+        while(!validNumber){
+         to = atm.getCustomerConsole().readNumber("Phone number to top up");
+         
+         validNumber = to.isValid();
+        
+        }
+        
+        while(!validAmount){
+            credits = atm.getCustomerConsole().readValue("Credits for top-up");
+            amount = new Money(credits * 100);
                             
             validAmount = atm.getCashDispenser().checkCashOnHand(amount);
 
             if (! validAmount)
                 amountMessage = "Insufficient cash available\n";
         }
-        
-        return new Message(Message.WITHDRAWAL, 
-                           card, pin, serialNumber, from, -1, amount);
+        return new Message(Message.TRANSFER, 
+                        card, pin, serialNumber, from, to.getFullNumber(), amount);
 
     }
     
@@ -72,7 +73,7 @@ public class Mobile extends Transaction
                 detailsPortion[0] = "TRANSFER FROM: " + 
                                     AccountInformation.ACCOUNT_ABBREVIATIONS[from] +
                                     " TO: " + 
-                                    AccountInformation.ACCOUNT_ABBREVIATIONS[to] ;
+                                    AccountInformation.ACCOUNT_ABBREVIATIONS[to.getFullNumber()] ;
                 detailsPortion[1] = "AMOUNT: " + amount.toString();
             }
         };
@@ -84,9 +85,13 @@ public class Mobile extends Transaction
     
     /**Phone nmber to transfer to
      */
-    private int to;
+    private PhoneNumber to;
     
     /** Amount of money to withdraw
      */
     private Money amount;
+    
+    /** Amount of credit to be bought
+     */
+    private int credits;
 }

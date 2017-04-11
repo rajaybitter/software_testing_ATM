@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=atm\ session\ card\ pin
+comment0.target=Transaction(atm.ATM,\ atm.Session,\ banking.Card,\ int)
+comment0.text=\ Constructor\n\n\ \ @param\ atm\ the\ ATM\ used\ to\ communicate\ with\ customer\n\ \ @param\ session\ the\ session\ in\ which\ this\ transaction\ is\ being\ performed\n\ \ @param\ card\ the\ customer's\ card\n\ \ @param\ pin\ the\ PIN\ entered\ by\ the\ customer\n
+comment1.params=atm\ session\ card\ pin
+comment1.target=Transaction\ makeTransaction(atm.ATM,\ atm.Session,\ banking.Card,\ int)
+comment1.text=\ Create\ a\ transaction\ of\ an\ appropriate\ type\ by\ asking\ the\ customer\n\ \ what\ type\ of\ transaction\ is\ desired\ and\ then\ returning\ a\ newly-created\n\ \ member\ of\ the\ appropriate\ subclass\n\n\ \ @param\ atm\ the\ ATM\ used\ to\ communicate\ with\ customer\n\ \ @param\ session\ the\ session\ in\ which\ this\ transaction\ is\ being\ performed\n\ \ @param\ card\ the\ customer's\ card\n\ \ @param\ pin\ the\ PIN\ entered\ by\ the\ customer\n\ \ @return\ a\ newly\ created\ Transaction\ object\ of\ the\ appropriate\ type\n\ \ @exception\ CustomerConsole.Cancelled\ if\ the\ customer\ presses\ cancel\ instead\n\ \ \ \ \ \ \ \ \ of\ choosing\ a\ transaction\ type\n
+comment2.params=
+comment2.target=boolean\ performTransaction()
+comment2.text=\ Peform\ a\ transaction.\ \ This\ method\ depends\ on\ the\ three\ abstract\ methods\n\ \ that\ follow\ to\ perform\ the\ operations\ unique\ to\ each\ type\ of\ transaction\n\ \ in\ the\ appropriate\ way.\n\n\ \ @return\ true\ if\ customer\ indicates\ a\ desire\ to\ do\ another\ transaction;\n\ \ \ \ \ \ \ \ \ \ false\ if\ customer\ does\ not\ desire\ to\ do\ another\ transaction\n\ \ @exception\ CardRetained\ if\ card\ was\ retained\ due\ to\ too\ many\ invalid\ PIN's\n
+comment3.params=
+comment3.target=banking.Status\ performInvalidPINExtension()
+comment3.text=\ Perform\ the\ Invalid\ PIN\ Extension\ -\ reset\ session\ pin\ to\ new\ value\ if\ successful\n\n\ \ @return\ status\ code\ returned\ by\ bank\ from\ most\ recent\ re-submission\n\ \ \ \ \ \ \ \ \ \ of\ transaction\n\ \ @exception\ CustomerConsole.Cancelled\ if\ customer\ presses\ the\ CANCEL\ key\n\ \ \ \ \ \ \ \ \ \ \ \ \ instead\ of\ re-entering\ PIN\n\ \ @exception\ CardRetained\ if\ card\ was\ retained\ due\ to\ too\ many\ invalid\ PIN's\n
+comment4.params=
+comment4.target=int\ getSerialNumber()
+comment4.text=\ Get\ serial\ number\ of\ this\ transaction\n\n\ \ @return\ serial\ number\n
+comment5.params=
+comment5.target=banking.Message\ getSpecificsFromCustomer()
+comment5.text=\ Get\ specifics\ for\ the\ transaction\ from\ the\ customer\ -\ each\n\ \ subclass\ must\ implement\ this\ appropriately.\n\n\ \ @return\ message\ to\ bank\ for\ initiating\ this\ transaction\n\ \ @exception\ CustomerConsole.Cancelled\ if\ customer\ cancelled\ this\ transaction\n
+comment6.params=
+comment6.target=banking.Receipt\ completeTransaction()
+comment6.text=\ Complete\ an\ approved\ transaction\ \ -\ each\ subclass\ must\ implement\n\ \ this\ appropriately.\n\n\ \ @return\ receipt\ to\ be\ printed\ for\ this\ transaction\n\ \ @exception\ CustomerConsole.Cancelled\ if\ customer\ cancelled\ this\ transaction\n
+numComments=7
