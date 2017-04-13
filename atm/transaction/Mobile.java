@@ -9,8 +9,9 @@ import banking.Money;
 import banking.PhoneNumber;
 import banking.Status;
 import banking.Receipt;
-//customer console
+//customerconsole
 //made Number class
+//simkeyboard
 
 public class Mobile extends Transaction
 {
@@ -40,22 +41,34 @@ public class Mobile extends Transaction
         boolean validAmount = false;
         boolean validNumber = false;
         
-        while(!validNumber){
-         to = atm.getCustomerConsole().readNumber("Phone number to top up");
-         
-         validNumber = to.isValid();
+        String [] amountOptions = { "$135", "$270", "$405", "$540", "$675" };
+        Money [] amountValues = { 
+                                  new Money(135), new Money(270), new Money(405),
+                                  new Money(540), new Money(675)
+                                };
         
-        }
-        
-        while(!validAmount){
-            credits = atm.getCustomerConsole().readValue("Credits for top-up");
-            amount = new Money(credits * 100);
+        while (! validAmount)
+        {
+            amount = amountValues [ 
+                atm.getCustomerConsole().readMenuChoice(
+                    amountMessage + "Credits to top up with", amountOptions) ];
                             
             validAmount = atm.getCashDispenser().checkCashOnHand(amount);
 
             if (! validAmount)
                 amountMessage = "Insufficient cash available\n";
         }
+        
+        /*while(!validNumber){
+         to = atm.getCustomerConsole().readNumber("Phone number to top up");
+         System.out.println(to.getFullNumber());
+         
+         validNumber= true; //= to.isValid();
+        
+        }*/
+        
+        
+            //use static list for this
         return new Message(Message.TRANSFER, 
                         card, pin, serialNumber, from, to.getFullNumber(), amount);
 

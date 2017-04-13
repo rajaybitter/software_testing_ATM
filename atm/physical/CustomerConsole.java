@@ -144,7 +144,7 @@ public class CustomerConsole
         Simulation.getInstance().display(prompt);
         Simulation.getInstance().display("");
         
-        String input = Simulation.getInstance().readInput(4, 0);
+        String input = Simulation.getInstance().readInput(Simulation.STRING_MODE, 0);
         
         Simulation.getInstance().clearDisplay();
         

@@ -213,7 +213,22 @@ class SimKeyboard extends Panel
                 else
                     getToolkit().beep();
                 break;
-            }               
+            }
+            
+            case STRING_MODE:
+            {
+                currentInput.append(digit);
+                String input = currentInput.toString();
+                setEcho(""+ input);
+                /*if (input.length() == 1)
+                    setEcho("" + input);
+                else if (input.length() == 2)
+                    setEcho("" + input);
+                else
+                    setEcho(input.substring(0, input.length() - 2) +
+                        input.substring(input.length() - 2));*/
+                break;
+            }
         }
     }
     
@@ -334,6 +349,11 @@ class SimKeyboard extends Panel
      *  and to clear the line if the user wishes; echo what use types
      */
     private static final int AMOUNT_MODE = Simulation.AMOUNT_MODE;
+    
+    /** Read input in amount mode - allow user to enter several characters,
+     *  and to clear the line if the user wishes; echo what use types
+     */
+    private static final int STRING_MODE = Simulation.STRING_MODE;
     
     /** Read input in menu choice mode - wait for one digit key to be pressed,
      *  and return value immediately.

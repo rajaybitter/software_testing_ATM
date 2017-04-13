@@ -253,6 +253,11 @@ public class Simulation
      */
     public static final int AMOUNT_MODE = 2;
     
+    /** Read input in string mode - allow user to enter several characters,
+     *  and to clear the line if the user wishes; echo what use types
+     */
+    public static final int STRING_MODE = 4;
+    
     /** Read input in menu choice mode - wait for one digit key to be pressed,
      *  and return value immediately.
      */
