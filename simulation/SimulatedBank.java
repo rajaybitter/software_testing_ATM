@@ -54,6 +54,7 @@ public class SimulatedBank
             case Message.INQUIRY:
             
                 return inquiry(message, balances);
+            
         }
         
         // Need to keep compiler happy
