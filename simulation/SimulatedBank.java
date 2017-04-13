@@ -160,7 +160,7 @@ public class SimulatedBank
         int fromAccountNumber = ACCOUNT_NUMBER [ cardNumber ] [ message.getFromAccount() ];
         if (fromAccountNumber == 0)
             return new Failure("Invalid from account type");
-    
+        //array index issue
         int toAccountNumber = ACCOUNT_NUMBER [ cardNumber ] [ message.getToAccount() ];
         if (toAccountNumber == 0)
             return new Failure("Invalid to account type");
@@ -187,6 +187,8 @@ public class SimulatedBank
         
         return new Success();
     } 
+    
+    
     
     /** Simulate processing of an inquiry
      *

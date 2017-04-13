@@ -12,7 +12,7 @@ import banking.Receipt;
 //customerconsole
 //made Number class
 //simkeyboard
-
+//simulatedBank
 public class Mobile extends Transaction
 {
     /** Constructor
@@ -59,18 +59,18 @@ public class Mobile extends Transaction
                 amountMessage = "Insufficient cash available\n";
         }
         
-        /*while(!validNumber){
+        while(!validNumber){
          to = atm.getCustomerConsole().readNumber("Phone number to top up");
-         System.out.println(to.getFullNumber());
+         System.out.println( to.getFullNumber() );
          
          validNumber= true; //= to.isValid();
         
-        }*/
+        }
         
         
             //use static list for this
-        return new Message(Message.TRANSFER, 
-                        card, pin, serialNumber, from, to.getFullNumber(), amount);
+        return new Message(Message.WITHDRAWAL, 
+                        card, pin, serialNumber, from, -1 ,amount);
 
     }
     
@@ -85,8 +85,7 @@ public class Mobile extends Transaction
                 detailsPortion = new String[2];
                 detailsPortion[0] = "TRANSFER FROM: " + 
                                     AccountInformation.ACCOUNT_ABBREVIATIONS[from] +
-                                    " TO: " + 
-                                    AccountInformation.ACCOUNT_ABBREVIATIONS[to.getFullNumber()] ;
+                                    " TO: " + to.getFullNumber() ;
                 detailsPortion[1] = "AMOUNT: " + amount.toString();
             }
         };
