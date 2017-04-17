@@ -63,8 +63,9 @@ public class Mobile extends Transaction
          to = atm.getCustomerConsole().readNumber("Phone number to top up");
          System.out.println( to.getFullNumber() );
          
-         validNumber= true; //= to.isValid();
-        
+         validNumber= to.isValid();
+         if (! validNumber)
+                amountMessage = "Invalid number entered\n";
         }
         
         

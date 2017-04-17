@@ -40,7 +40,8 @@ public class PhoneNumber
     }
     
     public boolean isValid(){
-        if(getFullNumber() >= 1000000000){
+        String fullNumber = String.valueOf(areaCode) + String.valueOf(number);
+        if( fullNumber.length() == 10 ){
             return true;
         }else{
             return false;
