@@ -148,7 +148,7 @@ public class CustomerConsole
         
         Simulation.getInstance().clearDisplay();
         
-        if (input == null || input.length() == 10)
+        if (input == null || input.length() != 10)
             throw new Cancelled();
         else
         {
