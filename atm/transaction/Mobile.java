@@ -7,14 +7,12 @@ import banking.Card;
 import banking.Message;
 import banking.Money;
 import banking.PhoneNumber;
-import banking.Status;
 import banking.Receipt;
 
 import java.util.Arrays;
 //customerconsole
-//made PhoneNumber class
+//made the PhoneNumber class
 //simkeyboard
-//simulatedBank
 public class Mobile extends Transaction
 {
     /** Constructor
@@ -113,8 +111,4 @@ public class Mobile extends Transaction
     /** Amount of money to withdraw
      */
     private Money amount;
-    
-    /** Amount of credit to be bought
-     */
-    private int credits;
 }

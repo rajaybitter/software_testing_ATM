@@ -114,30 +114,8 @@ public class CustomerConsole
         }
     }
     
-    /** Read a money amount entered by the customer
-     *
-     *  @param prompt the message to display prompting the customer to enter amount
-     *  @return the amount entered by the customer
-     *  @exception Cancelled if customer presses the CANCEL key before pressing ENTER
-     */
-    public synchronized int readValue(String prompt) throws Cancelled
-    {
-        Simulation.getInstance().clearDisplay();
-        Simulation.getInstance().display(prompt);
-        Simulation.getInstance().display("");
-        
-        String input = Simulation.getInstance().readInput(4, 0);
-        
-        Simulation.getInstance().clearDisplay();
-        
-        if (input == null)
-            throw new Cancelled();
-        else
-        {
-            return Integer.parseInt(input);
-        }
-    }
     
+    //ADDED THIS ETHOD TO ALLOW USER TO ENTER THE PHONE NUMBER
     public synchronized PhoneNumber readNumber(String prompt) throws Cancelled
     {
         Simulation.getInstance().clearDisplay();

@@ -214,7 +214,7 @@ class SimKeyboard extends Panel
                     getToolkit().beep();
                 break;
             }
-            
+            //ADDED THIS CASE
             case STRING_MODE:
             {
                 currentInput.append(digit);
@@ -241,6 +241,7 @@ class SimKeyboard extends Panel
             case IDLE_MODE:
             
                 break;
+            //ADDED THIS CASE
             case STRING_MODE:    
             case PIN_MODE:
             case AMOUNT_MODE:
@@ -273,6 +274,7 @@ class SimKeyboard extends Panel
                 currentInput.setLength(0);
                 setEcho("");
                 break;
+            //ADDED THIS CASE
             case STRING_MODE:
             
                 currentInput.setLength(0);
@@ -310,6 +312,8 @@ class SimKeyboard extends Panel
                 }
                 
             case PIN_MODE:
+            
+            //ADDED THIS CASE
             case STRING_MODE:
             case AMOUNT_MODE:
             case MENU_MODE:
@@ -355,6 +359,9 @@ class SimKeyboard extends Panel
      */
     private static final int AMOUNT_MODE = Simulation.AMOUNT_MODE;
     
+    //added this integer
+    //
+    //
     /** Read input in amount mode - allow user to enter several characters,
      *  and to clear the line if the user wishes; echo what use types
      */

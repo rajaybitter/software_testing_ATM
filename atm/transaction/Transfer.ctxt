@@ -1,13 +1,11 @@
 #BlueJ class context
-comment0.target=Transfer
-comment0.text=\ Representation\ for\ a\ transfer\ transaction\r\n
-comment1.params=atm\ session\ card\ pin
-comment1.target=Transfer(atm.ATM,\ atm.Session,\ banking.Card,\ int)
-comment1.text=\ Constructor\r\n\r\n\ \ @param\ atm\ the\ ATM\ used\ to\ communicate\ with\ customer\r\n\ \ @param\ session\ the\ session\ in\ which\ the\ transaction\ is\ being\ performed\r\n\ \ @param\ card\ the\ customer's\ card\r\n\ \ @param\ pin\ the\ PIN\ entered\ by\ the\ customer\r\n
+comment0.params=atm\ session\ card\ pin
+comment0.target=Transfer(atm.ATM,\ atm.Session,\ banking.Card,\ int)
+comment0.text=\ Constructor\n\n\ \ @param\ atm\ the\ ATM\ used\ to\ communicate\ with\ customer\n\ \ @param\ session\ the\ session\ in\ which\ the\ transaction\ is\ being\ performed\n\ \ @param\ card\ the\ customer's\ card\n\ \ @param\ pin\ the\ PIN\ entered\ by\ the\ customer\n
+comment1.params=
+comment1.target=banking.Message\ getSpecificsFromCustomer()
+comment1.text=\ Get\ specifics\ for\ the\ transaction\ from\ the\ customer\n\n\ \ @return\ message\ to\ bank\ for\ initiating\ this\ transaction\n\ \ @exception\ CustomerConsole.Cancelled\ if\ customer\ cancelled\ this\ transaction\n
 comment2.params=
-comment2.target=banking.Message\ getSpecificsFromCustomer()
-comment2.text=\ Get\ specifics\ for\ the\ transaction\ from\ the\ customer\r\n\r\n\ \ @return\ message\ to\ bank\ for\ initiating\ this\ transaction\r\n\ \ @exception\ CustomerConsole.Cancelled\ if\ customer\ cancelled\ this\ transaction\r\n
-comment3.params=
-comment3.target=banking.Receipt\ completeTransaction()
-comment3.text=\ Complete\ an\ approved\ transaction\r\n\r\n\ \ @return\ receipt\ to\ be\ printed\ for\ this\ transaction\r\n
-numComments=4
+comment2.target=banking.Receipt\ completeTransaction()
+comment2.text=\ Complete\ an\ approved\ transaction\n\n\ \ @return\ receipt\ to\ be\ printed\ for\ this\ transaction\n
+numComments=3
