@@ -11,7 +11,7 @@ public class PhoneNumber
 {
     // instance variables - replace the example below with your own
     private int areaCode;
-    private int number;
+    private long number;
 
     /**
      * Constructor for objects of class PhoneNumber
@@ -31,12 +31,12 @@ public class PhoneNumber
         return areaCode;
     }
     
-    public int getNumber(){
+    public long getNumber(){
         return number;
     }
     
-    public int getFullNumber(){
-        return Integer.parseInt( String.valueOf(areaCode) + String.valueOf(number));
+    public long getFullNumber(){
+        return Long.parseLong( String.valueOf(areaCode) + String.valueOf(number));
     }
     
     public boolean isValid(){

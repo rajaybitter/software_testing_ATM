@@ -1,4 +1,4 @@
-/*
+ /*
  * ATM Example system - file CustomerConsole.java   
  *
  * copyright (c) 2001 - Russell C. Bjork
@@ -154,7 +154,6 @@ public class CustomerConsole
         {
             int areaCode = Integer.parseInt(input.substring(0,3) );
             int number = Integer.parseInt(input.substring(3) );
-            System.out.println(""+ areaCode + " /" + number);
             return new PhoneNumber(areaCode, number);
         }
     }

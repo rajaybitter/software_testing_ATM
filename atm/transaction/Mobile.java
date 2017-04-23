@@ -9,8 +9,10 @@ import banking.Money;
 import banking.PhoneNumber;
 import banking.Status;
 import banking.Receipt;
+
+import java.util.Arrays;
 //customerconsole
-//made Number class
+//made PhoneNumber class
 //simkeyboard
 //simulatedBank
 public class Mobile extends Transaction
@@ -40,8 +42,11 @@ public class Mobile extends Transaction
         String amountMessage = "";
         boolean validAmount = false;
         boolean validNumber = false;
+        String option;
         
-        String [] amountOptions = { "$135", "$270", "$405", "$540", "$675" };
+        String [] amountOptions = { "$100", "$200", "$300", "$400", "$500"};
+        String [] options = {"Confirm", "Cancel"};
+        String [] taxAmounts = {"35", "70", "105", "140", "175"};
         Money [] amountValues = { 
                                   new Money(135), new Money(270), new Money(405),
                                   new Money(540), new Money(675)
@@ -61,15 +66,20 @@ public class Mobile extends Transaction
         
         while(!validNumber){
          to = atm.getCustomerConsole().readNumber("Phone number to top up");
-         System.out.println( to.getFullNumber() );
-         
+        
          validNumber= to.isValid();
          if (! validNumber)
                 amountMessage = "Invalid number entered\n";
         }
         
-        
-            //use static list for this
+       option = options [ 
+                atm.getCustomerConsole().readMenuChoice(
+                    amountMessage + "You will be charged a total of "+amount+" to "+to.getFullNumber()+".\nPress Confirm to continue", options) ];
+       
+       if(option.equals("Cancel")){
+         throw new CustomerConsole.Cancelled();
+       }             
+                    
         return new Message(Message.WITHDRAWAL, 
                         card, pin, serialNumber, from, -1 ,amount);
 
